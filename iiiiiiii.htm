@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع بيع الإفكتات</title>
+    <style>
+        /* إعادة تعيين الأنماط الافتراضية */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #f39c12;
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 50px 10%;
+        }
+        
+        h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .effect-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .effect-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .effect-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .effect-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .effect-card h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+        
+        .effect-card p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .buy-btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .buy-btn:hover {
+            background-color: #2ecc71;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 1em;
+        }
+        
+        footer p {
+            margin-top: 10px;
+        }
+        /* إضافة تأثيرات للإنتقال */
+        
+        .buy-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tiger-Store</h1>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">عن الموقع</a>
+            <a href="#">اتصل بنا</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>التأثيرات المتوفرة للبيع</h2>
+
+        <!-- تكرار تأثيرات (يمكنك إضافة المزيد) -->
+        <div class="effect-card">
+            <img src="effect1.jpg" alt="Effect 1">
+            <h3>Effects 0</h3>
+            <p>Store Tiger Effects</p>
+            <button class="buy-btn" data-effect="effect1"></button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="business@example.com">
+                <input type="hidden" name="item_name" value="تأثير 2">
+                <input type="hidden" name="item_number" value="ITEM_2">
+                <input type="hidden" name="amount" value="12.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="submit" value="شراء" class="buy-btn">
+            </form>
+        </div>
+
+        <div class="effect-card">
+            <img src="effect2.jpg" alt="Effect 2">
+            <h3>Effects 1</h3>
+            <p>وStore Tiger Effects</p>
+            <button class="buy-btn" data-effect="effect2"></button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="business@example.com">
+                <input type="hidden" name="item_name" value="تأثير 2">
+                <input type="hidden" name="item_number" value="ITEM_2">
+                <input type="hidden" name="amount" value="12.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="submit" value="شراء" class="buy-btn">
+            </form>
+        </div>
+
+        <div class="effect-card">
+            <img src="effect3.jpg" alt="Effect 3">
+            <h3>Effects 2</h3>
+            <p>وStore Tiger Effects</p>
+            <button class="buy-btn" data-effect="effect3"></button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="business@example.com">
+                <input type="hidden" name="item_name" value="تأثير 2">
+                <input type="hidden" name="item_number" value="ITEM_2">
+                <input type="hidden" name="amount" value="12.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="submit" value="شراء" class="buy-btn">
+            </form>
+        </div>
+
+        <div class="effect-card">
+            <img src="effect4.jpg" alt="Effect 4">
+            <h3>Effects 3</h3>
+            <p>Store Tiger Effects</p>
+            <button class="buy-btn" data-effect="effect4"></button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="business@example.com">
+                <input type="hidden" name="item_name" value="تأثير 2">
+                <input type="hidden" name="item_number" value="ITEM_2">
+                <input type="hidden" name="amount" value="12.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="submit" value="شراء" class="buy-btn">
+            </form>
+        </div>
+
+        <!-- أضف المزيد من التأثيرات هنا مع تكرار الشكل نفسه -->
+        <!-- إضافة 25 تأثيرًا مع تغيير اسم الصورة والوصف -->
+
+        <!-- على سبيل المثال -->
+        <div class="effect-card">
+            <img src="effect5.jpg" alt="Effect 5">
+            <h3>Effects 4</h3>
+            <p>Store Tiger Effects</p>
+            <button class="buy-btn" data-effect="effect5"></button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="business@example.com">
+                <input type="hidden" name="item_name" value="تأثير 2">
+                <input type="hidden" name="item_number" value="ITEM_2">
+                <input type="hidden" name="amount" value="12.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="submit" value="شراء" class="buy-btn">
+            </form>
+        </div>
+
+
+        <div class="effect-card">
+            <img src="effect5.jpg" alt="Effect 5">
+            <h3>Effects 5</h3>
+            <p>Store Tiger Effects</p>
+            <button class="buy-btn" data-effect="effect5"></button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="business@example.com">
+                <input type="hidden" name="item_name" value="تأثير 2">
+                <input type="hidden" name="item_number" value="ITEM_2">
+                <input type="hidden" name="amount" value="12.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="submit" value="شراء" class="buy-btn">
+            </form>
+        </div>
+
+
+
+
+        <div class="effect-card">
+            <img src="effect25.jpg" alt="Effect 25">
+            <h3>Effects 6</h3>
+            <p>Store Tiger Effects</p>
+            <button class="buy-btn" data-effect="effect25"></button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="business@example.com">
+                <input type="hidden" name="item_name" value="تأثير 2">
+                <input type="hidden" name="item_number" value="ITEM_2">
+                <input type="hidden" name="amount" value="12.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="submit" value="شراء" class="buy-btn">
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Mo-Tiger-Store</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buyButtons = document.querySelectorAll('.buy-btn');
+
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const effectName = button.getAttribute('data-effect');
+                    alert(`تم إضافة ${effectName} إلى سلة المشتريات!`);
+                    // هنا يمكنك دمج منطق الدفع باستخدام PayPal أو Stripe
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
